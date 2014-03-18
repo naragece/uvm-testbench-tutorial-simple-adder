@@ -1,0 +1,13 @@
+VCS	=	vcs
+
+SIMV	=	./simv
+
+x:	comp run 
+
+comp:
+	$(VCS) simpleadder_directtb_driver.v ../simpleadder.v
+run:
+	$(SIMV)
+
+clean:
+	rm -rf DVEfiles opendatabase.log simpleadder.dump.vpd csrc simpleadder.dump simv simv.daidir ucli.key .inter.vpd.uvm
